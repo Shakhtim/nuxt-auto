@@ -118,4 +118,8 @@ onMounted(() => {
 .mb_all_brands .wrap_brand:hover {
   transform: scale(1.1);
 }
+.mb_top_phone_icon img{
+  width: 30px;
+  height: 30px;
+}
 </style>

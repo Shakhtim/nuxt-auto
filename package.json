@@ -12,14 +12,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/image": "^1.8.1",
+    "@nuxt/image": "^1.9.0",
     "@nuxtjs/pwa": "^3.1.2",
     "axios": "^1.7.9",
     "ipx": "^3.0.1",
     "nuxt": "^3.14.1592",
     "nuxt-easy-lightbox": "^1.0.2",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.15",
+    "swiper": "^11.2.4",
     "vue": "latest",
     "vue-easy-lightbox": "^1.19.0",
     "vue-gallery": "^2.0.5",

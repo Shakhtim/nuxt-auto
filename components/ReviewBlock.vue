@@ -4,9 +4,20 @@
         Отзывы наших клиентов
       </div>
       <swiper :slides-per-view="2" :space-between="30" class="container reviews reviews-slider"
+      :modules="[Autoplay]"
+      :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false,
+      }"
       :breakpoints="{
-          1024: { slidesPerView: 2 },
-          768: { slidesPerView: 1 },
+          '240': {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          '768': {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
         }">
         <swiper-slide v-for="(review, index) in reviews" :key="index" class="review">
           <div class="review__img">
@@ -39,7 +50,8 @@
   </template>
   
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import {  Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 // Определяем props

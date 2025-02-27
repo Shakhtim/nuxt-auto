@@ -26,12 +26,7 @@
         />
         <CarGallery v-if="model" :photos="filteredImages" />
       <CheaperForm />
-      <!-- 
-      
-      <VideoReview v-if="model" :rutubeId="model.rutube_id" /> -->
-      
-      <div v-if="loading">Загрузка...</div>
-      <div v-if="error">{{ error }}</div>
+      <VideoReview v-if="model" :rutubeId="model.rutube_id" />
   </template>
   
   <script setup>

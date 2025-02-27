@@ -31,7 +31,7 @@
         <nuxt-link :to="{ name: 'policy' }" class="footer_address" style="text-decoration: underline;">
           Пользовательское соглашение
         </nuxt-link>
-        <div class="footer_button call" @click="requestCall">Обратный звонок</div>
+        <div class="footer_button call">Обратный звонок</div>
       </div>
     </div>
 

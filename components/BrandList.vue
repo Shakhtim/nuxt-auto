@@ -18,8 +18,13 @@
 
     <div class="container grey_mobile">
       <Swiper
-        :slides-per-view="slidesPerView"
+        :slides-per-view="1"
         :space-between="30"
+        :modules="[Autoplay]"
+        :autoplay="{
+          delay: 2000,
+          disableOnInteraction: false,
+        }"
         class="brands"
       >
         <SwiperSlide
@@ -44,6 +49,7 @@ import { ref, computed, onMounted } from 'vue';
 import axios from 'axios';
 import { useRuntimeConfig } from '#app';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 const config = useRuntimeConfig();
@@ -73,12 +79,6 @@ const brandChunks = computed(() => {
   }
   return chunks;
 });
-
-// Вычисляемое свойство для определения количества слайдов на экране
-const slidesPerView = computed(() => {
-  return window.innerWidth < 768 ? 1 : 6; // 1 слайд для мобильных, 6 для десктопа
-});
-
 
 onMounted(() => {
   fetchBrands();

@@ -26,24 +26,20 @@
         </div>
         <div class="item item_address">
           <div class="label">Юр. Лицо:</div>
-          <div class="item_description">ООО "СТАТУС"</div>
+          <div class="item_description">ООО "ТК ПРЕМИУМ ИНВЕСТ"</div>
         </div>
         <div class="item item_address">
           <div class="label">ИНН</div>
-          <div class="item_description">9728097964</div>
-        </div>
-        <div class="item item_address">
-          <div class="label">КПП</div>
-          <div class="item_description">772801001</div>
+          <div class="item_description">9725142062</div>
         </div>
         <div class="item item_address">
           <div class="label">ОГРН</div>
-          <div class="item_description">1237700394260</div>
+          <div class="item_description">1237700847504</div>
         </div>
         <div class="item">
           <div class="label">Юр. Адрес:</div>
           <div class="item_description">
-            119421 г. Москва вн. Тер. Г. муниципальный округ Обручевский, пр-кт Ленинский д. 111 к. 1 помещ. 24н
+            г. Москва, 33км МКАД, 6с6
           </div>
         </div>
       </div>
@@ -99,7 +95,11 @@ const showImg = (index) => {
   indexRef.value = index;
   visibleRef.value = true;
 };
-const onHide = () => (visibleRef.value = false);
+
+const onHide = () => {
+  visibleRef.value = false;
+  document.body.style.overflowY = '';
+};
 
  const fetchSettings = async() => {
   try {
